@@ -1,7 +1,9 @@
+# Encryptable Trait
+
+### Usage
 Create file `/app/Traits/Encryptable.php`
 
 ```
-
 <?php
 
 namespace App\Traits;
