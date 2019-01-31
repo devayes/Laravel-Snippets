@@ -1,5 +1,5 @@
 #### Install
-Add this file to your `/resources/views/partials` folder
+Add the `breadcrumbs.blade.php` file to your `/resources/views/partials` folder
 
 ### Usage
 ```
