@@ -1,4 +1,5 @@
 # JSONFields Trait
+This trait automatically encodes and decodes array data using JSON.
 
 ### Usage
 Create file `/app/Traits/JSONFields.php`
