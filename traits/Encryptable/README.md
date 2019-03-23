@@ -1,4 +1,5 @@
 # Encryptable Trait
+This trait allows you to automatically encrypt and decrypt specified columns transparently.
 
 ### Usage
 Create file `/app/Traits/Encryptable.php`
