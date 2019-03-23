@@ -11,23 +11,20 @@ namespace App\Traits;
 trait Encryptable {
 
     public function getAttribute($key) 
-    { 
-        $value = parent::getAttribute($key);
-
-        if (in_array($key, $this->encryptable)) { 
+    {
+        if (is_array($this->encryptable) && in_array($key, $this->encryptable)) { 
+            $value = parent::getAttribute($key);
             $value = decrypt($value); 
-        } 
-
-        return $value; 
+            return $value;
+        }
     } 
     
     public function setAttribute($key, $value) 
     { 
-        if (in_array($key, $this->encryptable)) { 
+        if (is_array($this->encryptable) && in_array($key, $this->encryptable)) { 
             $value = encrypt($value); 
-        }
-
-        return parent::setAttribute($key, $value); 
+            return parent::setAttribute($key, $value);
+        } 
     } 
     
 } 
@@ -49,6 +46,6 @@ class Messages extends Model {
      *
      * @var string
      */
-    protected $encryptable = [ 'title', 'message']; 
+    protected $encryptable = ['title', 'message']; 
 } 
 ```
